@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Users Form</title>
+  </head>
+  <body>
+    <h1>Users</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td>{{ user[1] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <br>
+    <form action="/add_user" method="post">
+      <input type="text" name="name" placeholder="Name">
+      <button type="submit">Submit</button>
+    </form>    
+  </body>
+</html>

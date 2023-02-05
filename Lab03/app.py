@@ -11,7 +11,7 @@ from wtforms.validators import DataRequired
 app = Flask(__name__)
 
 crsf = CSRFProtect(app)
-app.config["SECRET_KEY"] = "chave_secreta"
+app.config["SECRET_KEY"] = "my_secret_key"
 
 class NameForm(FlaskForm):
     name = StringField("Name", validators=[DataRequired()])
