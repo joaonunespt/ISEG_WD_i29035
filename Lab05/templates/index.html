@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>User Management</title>
+    </head>
+    <body>
+        {% if error %}
+            <p style="color:red">{{ error }}</p>
+        {% endif %}
+        <form action="{{ url_for('app.login_controller') }}" method="post">
+            <p>Username: <input type="text" name="username"></p>
+            <p>Password: <input type="password" name="password"></p>
+            <p><input type="submit" value="Login"></p>
+        </form>
+        <form action="{{ url_for('app.register_controller') }}" method="post">
+            <p>Username: <input type="text" name="username"></p>
+            <p>Password: <input type="password" name="password"></p>
+            <p><input type="submit" value="Register"></p>
+        </form>
+    </body>
+</html>
+
+<!--
+    Página html que permite o login do utilizador ou o registo de um novo utilizador 
+    
+    Caso existam mensagens de erro a serem mostradas, mostra a mensagem a cor vermelha - provenientes da função views.index()
+    
+    São apresentados dois forms na mesma página:
+        Login:
+            Contém os Campos "Username" e "Password" e um botão de "Login"
+        Register:
+            Contém os Campos "Username" e "Password" e um botão de "Register"
+
+    Consoante o submit passe os valores "Login" ou "Register" são chamados os controllers:
+
+        Login:
+            @app.route('/login', methods=['GET', 'POST'])
+            def login_controller():
+        
+        Register:
+            @app.route('/register', methods=['GET', 'POST'])
+            def register_controller():
+-->

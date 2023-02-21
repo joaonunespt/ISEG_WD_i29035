@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>User Management</title>
+    </head>
+    <body>
+        <p>Welcome {{ username }}</p>
+        <form action="{{ url_for('app.home_controller') }}" method="post">
+            <p><input type="submit" value="Logout"></p>
+        </form>
+    </body>
+</html>
+
+
+<!--
+    Página html que mostra a mensagem "Welcomo" e o respectivo username do utilizador 
+    Mostra também um botão de Logout.
+    Se o utilizador clickar no botão de logout, é redirecionado para o URL que está definido na função home_controller ("/home")
+-->
