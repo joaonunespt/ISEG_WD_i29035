@@ -1,6 +1,7 @@
-------------
+------------------------------------------------------------------------------------------
 Pergunta 1:
-------------
+Can you describe how user authentication and authorization is implemented in each project?
+------------------------------------------------------------------------------------------
 
 	Projeto_1
 -----------------
@@ -35,7 +36,25 @@ Pergunta 1:
 	
 	No Projecto 2 os "controllers", "Models" e "Views" estão em ficheiros separados
 
-------------
+---------------------------------------------------------------------------
 Pergunta 2:
-------------
+Can you describe how user posts and comments are implemented in Project 1?
+---------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------
+Pergunta 3:
+Can you describe how the search feature is implemented in project 1?
+----------------------------------------------------------------------
+
+A implementação da funcionalidade de pesquisa está definida no ficheiro app.py e na função search() que tem "/search" como route e no template "search.html"
+Quando um utilizador escreve o texto que pretende consultar e clica no botão "Search" o valor do elemento do form que contém o texto com atributo name="query" é submetido para o servidor.
+ 
+A função search() se receber o POST Request utiliza o valor recebido do form cujo name="query" (request.form['query']) e processa uma query SQL para obter todos os posts que façam match com o texto a pesquisar na coluna "content"
+Efectua também a pesquisa dos respectivos comentários ao Posts
+Os resultados da pesquisa são depois reenviados para o template "search.html" para serem exibidos na página.
+Caso existam resultados, é visualizada uma lista de Posts e Comments que correspondem à consulta de pesquisa, com o Autor, Conteúdo e Timestamp e uma caixa para adicionar comentário aos Posts
+
+	
 	
