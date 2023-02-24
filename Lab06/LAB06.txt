@@ -38,17 +38,4 @@ Pergunta 1:
 ------------
 Pergunta 2:
 ------------
-
-
-Estas funcionalidades são implementadas nas funções ‘comment’ e ‘post’, sendo que ambas são “chamadas” na função ‘feed’.
-
-Esta é uma aplicação Flask com duas vias: "/post" e "/comment". 
-A rota "/post" trata de pedidos de GET e POST, e recupera mensagens e comentários a partir de uma base de dados. 
-Se o método de pedido é o POST, recebe a imagem carregada e o conteúdo do post e guarda-os numa base de dados. 
-Depois recupera os posts atualizados e comentários da base de dados e remete-nos para a página "feed.html" com a atualização dados. 
-
-A rota "/comment" trata de pedidos POST, recupera o ID do correio, ID do utilizador, e comenta o conteúdo do formulário, e insere o comentário na base de dados.
-
-
-	
 	
