@@ -23,7 +23,6 @@ Register Page:
 
 
 
-
 S@rc@stic Home:
 =============
 
@@ -65,6 +64,14 @@ Friends Profile Page:
 ![image](https://user-images.githubusercontent.com/74052985/223129207-d170b2fd-483f-47d4-a92f-57d8d324607d.png)
 
 ![image](https://user-images.githubusercontent.com/74052985/223129815-f575ec3f-aa0c-4cfb-b20a-8c90879b0d81.png)
+
+
+Search:
+=============
+
+> Allows you to perform text search on all Posts 
+
+![image](https://user-images.githubusercontent.com/74052985/223131218-38f96e1a-1846-4308-be88-be70f9ed6ea5.png)
 
 
 
