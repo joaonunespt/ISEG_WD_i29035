@@ -1,32 +1,56 @@
 
-http://sarcasticlab.pythonanywhere.com/login
+Hosting:
+=============
 
-Login page:
+`<link>` <http://sarcasticlab.pythonanywhere.com/login>
 
-![image](https://user-images.githubusercontent.com/74052985/223010927-c0394a6e-c5e3-4443-bb2b-e3ff45ac851e.png)
+`<User>` jnunes
 
-Username: jnunes
+`<Password>` 123456
 
-Password: 123456
+Login Page:
+=============
+
+![image](https://user-images.githubusercontent.com/74052985/223123816-3784f33a-a625-425a-aaca-39631e5978cd.png)
+
 
 Register Page:
+=============
 
-![image](https://user-images.githubusercontent.com/74052985/223011018-6025746c-3d8a-43d7-8c0b-552e6bf0cefd.png)
+![image](https://user-images.githubusercontent.com/74052985/223123968-c7f3899c-6dfe-4551-a4bd-69e0be9e22bd.png)
 
-S@rc@stic:
 
-![image](https://user-images.githubusercontent.com/74052985/223011135-89f4c27c-0f24-4f58-954f-5d1518f47dc2.png)
+S@rc@stic Home:
+=============
+
+![image](https://user-images.githubusercontent.com/74052985/223124491-cfa9a1f6-bcb1-4ac2-8245-90f772e9babd.png)
 
 Post:
+=============
 
-![image](https://user-images.githubusercontent.com/74052985/223011952-32253e89-466d-4bdd-94a3-424cf1b39d7b.png)
+![image](https://user-images.githubusercontent.com/74052985/223124652-bbbfd1b6-b3fd-4a5d-be11-77dc12d5dc9d.png)
 
 Friends Page:
+=============
 
-![image](https://user-images.githubusercontent.com/74052985/223011290-37f60944-ee9d-4a92-8658-9699922a7898.png)
+![image](https://user-images.githubusercontent.com/74052985/223124781-ad12acaf-c5f1-4389-b3e0-5ad162a2f1cd.png)
 
-Settings:
+Top Poster's: (Display the Top 5 users with the most posts)
+=============
 
-![image](https://user-images.githubusercontent.com/74052985/223011360-3c6c8974-b208-4d62-b3f3-7546e8c6c900.png)
+![image](https://user-images.githubusercontent.com/74052985/223124977-553739f1-351e-4911-91c4-cfb86489a298.png)
+
+
+Suggested Users: (Suggest Friends to be added)
+=============
+
+![image](https://user-images.githubusercontent.com/74052985/223125566-2ebe321d-f4c6-4482-b8fe-72321b40264e.png)
+
+
+Settings: (To change some of the user settings)
+=============
+
+![image](https://user-images.githubusercontent.com/74052985/223125630-70d84e8d-2ec0-40a7-a81c-99a25c637008.png)
+
 
 
