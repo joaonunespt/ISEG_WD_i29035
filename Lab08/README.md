@@ -13,3 +13,12 @@ S@rc@stic:
 
 ![image](https://user-images.githubusercontent.com/74052985/223011135-89f4c27c-0f24-4f58-954f-5d1518f47dc2.png)
 
+Friends Page:
+
+![image](https://user-images.githubusercontent.com/74052985/223011290-37f60944-ee9d-4a92-8658-9699922a7898.png)
+
+Settings:
+
+![image](https://user-images.githubusercontent.com/74052985/223011360-3c6c8974-b208-4d62-b3f3-7546e8c6c900.png)
+
+
