@@ -6,6 +6,7 @@ Login page:
 ![image](https://user-images.githubusercontent.com/74052985/223010927-c0394a6e-c5e3-4443-bb2b-e3ff45ac851e.png)
 
 Username: jnunes
+
 Password: 123456
 
 Register Page:
