@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- Display card for every post passed in render_template(posts=posts) -->
+    {% for post in posts %}
+        {% include "/cards/post.html" %}
+    {% endfor %}
+
+{% endblock content %}

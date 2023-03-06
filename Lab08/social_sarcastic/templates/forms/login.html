@@ -1,0 +1,15 @@
+<form class="login-forms">
+    {{ login_form.csrf_token }}
+    <!-- Username-->
+    {{ login_form.username.label }}
+    <div class="input-group mb-2">
+        {{ login_form.username(class="form-control", placeholder="Enter username:") }}
+    </div>
+    <!-- Password -->
+    {{ login_form.password.label }}
+    <div class="input-group mb-2">
+        {{ login_form.password(class="form-control", placeholder="Enter password:") }}
+    </div>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mt-3">Sign in</button>
+</form>

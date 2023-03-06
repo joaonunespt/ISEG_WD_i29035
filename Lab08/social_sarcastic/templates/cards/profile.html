@@ -1,0 +1,31 @@
+<div class="card bg border-0 border-top border-bottom rounded-0">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8">
+                {% with current_user = profile_owner[2] %}
+                    {% include "/partials/profile-image.html" %}
+                {% endwith %}
+                    <span class="text-displayname ms-3">{{ profile_owner[1] }}</span>
+                    <span class="text-username">@{{ profile_owner[2] }}</span>
+            </div>
+            <div class="col-4">
+                {% if current_user != profile_owner[2] %}
+                    {% if profile_owner not in friends %}
+                        <!-- Add friend button -->
+                        <form action="/add-friend/{{ profile_owner[2] }}" method="POST">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                            <button type="submit" class="btn btn-sm mt-3 btn-outline-primary">Add friend</button>
+                        </form>
+                    {% endif %}
+                    {% if profile_owner in friends %}
+                    <!-- Remove friend button -->
+                    <form action="/remove-friend/{{ profile_owner[2] }}" method="POST">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                        <button type="submit" class="btn btn-sm mt-3 btn-outline-danger">Remove friend</button>
+                    </form>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

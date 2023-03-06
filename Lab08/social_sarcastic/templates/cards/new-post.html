@@ -1,0 +1,16 @@
+<div class="card auth-required bg border-0 border-bottom rounded-0">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2 text-center">
+                <a href="/profile/{{ username }}">
+                    {% with filename = username %}
+                        {% include "/partials/profile-image-large.html" %}
+                    {% endwith %}
+                </a>
+            </div>
+            <div class="col-10">
+                {% include "/forms/new-post.html" %}
+            </div>
+        </div>
+    </div>
+</div>

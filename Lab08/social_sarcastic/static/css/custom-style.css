@@ -1,0 +1,100 @@
+/* Theming */
+
+:root {
+    --global-bg-color: white;
+    --global-text-color-primary: black;
+    --global-text-color-secondary: gray;
+    --global-text-color-action: blue;
+}
+
+/* Background */
+.bg {
+    background-color: var(--global-bg-color);
+}
+
+/* Text */
+
+.text-navlink {
+    font-size: 1.45em;
+    color: var(--global-text-color-primary);
+    vertical-align: middle;
+}
+
+.text-label {
+    font-size: 1em;
+    color: var(--global-text-color-primary);
+}
+
+.text-displayname {
+    font-size: 1.25em;
+    font-weight: 550;
+    color: var(--global-text-color-primary);
+}
+
+.text-displayname-sm {
+    font-size: 1em;
+    font-weight: 550;
+    color: var(--global-text-color-primary);
+}
+
+.text-username {
+    color: var(--global-text-color-secondary);
+    font-size: 1em;
+}
+
+.text-timeposted {
+    color: var(--global-text-color-secondary);
+    font-size: 0.9em;
+}
+
+.text-post-body {
+    color: var(--global-text-color-primary);
+    font-size: 1em;
+}
+
+/* Text areas */
+
+.text-area {
+    background-color: var(--global-bg-color);
+    resize: none;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.text-area:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Anchors */
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+/* Navigation column */
+
+.navbar-brand {
+    font-size: 1.9em;
+    color: var(--global-text-color-primary);
+    vertical-align: middle;
+}
+
+.nav-link {
+    margin-top: 15px;
+    padding-left: 0;
+}
+
+#login-button {
+    position: absolute;
+    bottom: 0;
+}
+
+#profile-menu {
+    position: absolute;
+    bottom: 0;
+}
+
+#profile-menu-toggler{
+    color: var(--global-text-color-primary);
+}

@@ -1,0 +1,11 @@
+<label for="set-theme-form" class="col-form-label text-label">Select a theme</label>
+<form action="/set_theme" method="POST" id="set-theme-form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    <div class="input-group">
+        <select id="theme-dropdown" name="theme-dropdown" class="form-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Select</button>
+    </div>
+</form>

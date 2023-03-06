@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Login</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <link href="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+      <link
+         rel="stylesheet"
+         href="{{ url_for('static', filename='css/register_style.css') }}"
+         />
+   </head>
+   <body>
+      
+      {% for message in get_flashed_messages() %}
+         <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+      {% endfor %}
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+      <br>
+      <br>
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-md-8">
+               <div class="card-group mb-0">
+                  <div class="card p-4">
+                    <form action="/register", method="post" enctype="multipart/form-data">
+
+                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+                        <div class="card-body">
+                           <div class="text-center mt-4">
+                              <h1 class="h2">Get started!!</h1>
+                              <p class="lead">
+                                 Start creating the Funny, Sarcastic and Ironic posts...
+                              </p>
+                           </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" name="username" class="form-control" id="username", required=True, placeholder="Enter your username">
+                            </div>
+
+                            <div class="input-group mb-3">
+                              <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                              <input type="text" name="name" class="form-control" id="name", required=True, placeholder="Enter your name">
+                            </div>
+
+                            <div class="input-group mb-4">
+                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                 <input type="text" name="password" class="form-control" id="password", required=True, placeholder="Enter your password">
+                                 
+                                 <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-append1" onclick="togglePassword()">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                 </div>
+                            </div>
+
+                            <div class="input-group mb-4">
+                              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                              <input type="text" name="confirm_password" class="form-control" id="confirm_password", required=True, placeholder="Confirm your password", onfocusout="validate_password()">
+
+                              <div class="input-group-append">
+                                 <button class="btn btn-outline-secondary" type="button" id="button-append2" onclick="toggleConfirmPassword()">
+                                 <i class="fa fa-eye" aria-hidden="true"></i>
+                                 </button>
+                              </div>
+                           </div>
+
+                           <div class="help-block text-right">
+                              <small><span id="error-confirmpassword" class="hide" pull-right block-help>
+                              <i class="fa fa-info-circle text-danger" aria-hidden="true"></i> The passwords don't match</span></small>
+                           </div>
+
+                            <div class="input-group mb-4">
+                              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                              <input type="text" name="email" class="form-control" id="email", required=True, placeholder="Enter your email">
+                            </div>
+
+                            <div class="input-group mb-4">
+                              <span class="input-group-addon"><i class="fa fa-picture-o"></i></span>
+                              <input type="file" name="file" class="form-control" id="file", required=True, placeholder="Enter your profile picture">
+                            </div>
+                            
+                            <div class="row">
+                              <div class="col-6">
+                                 <button id="reg_submit" type="submit" class="btn btn-primary px-4">Sign up</button>
+                              </div>
+                            </div>
+                            
+                        </div>
+                    </form> 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+         $(document).ready(function() { 
+
+            // password-confirm error divi hide/show
+            $('#confirm_password').blur(function() {
+               if ($('#password').val() != $('#confirm_password').val()) {
+                  $('#error-confirmpassword').removeClass('hide');
+                  $('#reg_submit').attr('disabled', true);
+               } else {
+               $('#error-confirmpassword').addClass('hide');
+               $('#reg_submit').attr('disabled', false);
+               }
+            });
+
+         });
+
+         function togglePassword() {
+            var element = document.getElementById('password');
+            element.type = (element.type == 'password' ? 'text' : 'password');
+          };
+
+          function toggleConfirmPassword() {
+            var element = document.getElementById('confirm_password');
+            element.type = (element.type == 'password' ? 'text' : 'password');
+          };
+
+      </script>
+   </body>
+</html>

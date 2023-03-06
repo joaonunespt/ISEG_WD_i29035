@@ -1,0 +1,13 @@
+<!-- Website logo larger screen sizes-->
+<a class="navbar-brand d-none d-lg-block" href="/">S@rc@stic</a>
+<!-- Website logo smaller screen sizes-->
+<a class="navbar-brand d-lg-none" href="/">@</a>
+<!-- Navigation links -->
+{% set nav_links = ["home", "explore", "friends", "profile", "settings"] %}
+{% for nav_link in nav_links %}
+        <a class="nav-link" href="/{{ nav_link }}">
+            <img src="/static/images/{{ nav_link }}-icon-{{ theme }}.png" width="25" height="25"
+                 alt="{{ nav_link | capitalize }} icon">
+            <span class="text-navlink d-none d-lg-inline ms-2">{{ nav_link | capitalize }}</span>
+        </a>
+{% endfor %}

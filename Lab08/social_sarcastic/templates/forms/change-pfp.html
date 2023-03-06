@@ -1,0 +1,8 @@
+<label for="change-pfp" class="form-label text-label">Change profile picture</label>
+<form action="/change_pfp" method="POST" enctype="multipart/form-data" id="change-pfp-form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    <div class="input-group">
+        <input type="file" class="form-control" name="file" tabindex="0"/>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+</form>

@@ -1,0 +1,24 @@
+<form id="signup-form">
+    {{ signup_form.csrf_token }}
+    <!-- Username-->
+    {{ signup_form.username.label }}
+    <div class="input-group mb-2">
+        {{ signup_form.username(class="form-control", placeholder="Enter username:") }}
+    </div>
+    <!-- Password -->
+    {{ signup_form.password.label }}
+    <div class="input-group mb-2">
+        {{ signup_form.password(class="form-control", placeholder="Enter password:") }}
+    </div>
+    {{ signup_form.confirm_password.label }}
+    <div class="input-group mb-2">
+        {{ signup_form.confirm_password(class="form-control", placeholder="Re-enter password:") }}
+    </div>
+    <!-- Display name -->
+    {{ signup_form.display_name.label }}
+    <div class="input-group mb-2">
+        {{ signup_form.display_name(class="form-control", placeholder="Enter display name:") }}
+    </div>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mt-3">Sign up</button>
+</form>

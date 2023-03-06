@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Login</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <link href="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+      <link
+         rel="stylesheet"
+         href="{{ url_for('static', filename='css/login_style.css') }}"
+         />
+   </head>
+   <body>
+
+      {% include 'macros.html' %} 
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+      <br>
+      <br>
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-md-8">
+               <div class="card-group mb-0">
+                  <div class="card p-4">
+                    <form action="/login" method="post">
+                        {{ form.hidden_tag() }}
+
+                        <div class="card-body">
+                            <h1>Login</h1>
+                            <p class="text-muted">Sign In to your account</p>
+                            <div class="input-group mb-3">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                {{ form.username(class="form-control", id="username", required=True, placeholder="Username") }}
+                            </div>
+                            <div class="input-group mb-4">
+                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                 {{ form.password(class="form-control", id="password", required=True, placeholder="Password") }}
+
+                                 <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-append1" onclick="togglePassword()">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                 </div>
+
+                            </div>
+                            <div class="row">
+                              <div class="col-6">
+                                 <button type="submit" class="btn btn-primary px-4">Login</button>
+                              </div>
+                            </div>
+                        </div>
+                    </form> 
+                  </div>
+                  <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
+                     <div class="card-body text-center">
+                        <form action="/register_page" method="post">
+                           <div>
+                              <h2>Sign up</h2>
+                              <br>
+                              <p>Sign up for this fantastic sarcastic world of fun!!</p>
+                              <br>
+                              <a class="btn btn-success active mt-3" href="{{ url_for('registration') }}" role="button">Register Now!</a>
+                           </div>
+                     </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+
+         function togglePassword() {
+            var element = document.getElementById('password');
+            element.type = (element.type == 'password' ? 'text' : 'password');
+          };      
+
+      </script>
+   </body>
+</html>

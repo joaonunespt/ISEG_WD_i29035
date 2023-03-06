@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <div class="card bg border-0 my-2">
+        <div class="card-body">
+            <!-- Select theme -->
+            <div class="mb-4">
+                {% include "/forms/select-theme.html" %}
+            </div>
+            <!-- Change profile picture -->
+            <div class="mb-4">
+                {% include "/forms/change-pfp.html" %}
+            </div>            
+            <!-- Change display name -->
+            <div class="mb-4">
+                {% include "/forms/change-display-name.html" %}
+            </div>
+            <!-- Change password -->
+            <div class="mb-4">
+                {% include "/forms/change-password.html" %}
+            </div>                 
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+<div class="card shadow bg-white rounded">
+    <div class="card-header">
+        <h1 class="text-navlink">Sugested Friends</h1>
+    </div>
+    <br>
+    {% for sugested_user in sugested_users %}
+        <div class="container">
+            <div class="row">
+                <div class="col">                
+                    <div class="mb-3">
+                        <a href="/profile/{{ sugested_user[2] }}">
+                            {% with current_user = sugested_user[2] %}
+                                {% include "/partials/profile-image.html" %}
+                            {% endwith %}
+                            <p class="d-inline mx-2">
+                                <span class="text-displayname-sm d-none d-md-inline">{{ sugested_user[1] }}</span>
+                            </p>
+                        </a>
+                    </div>
+                </div>                       
+                <div class="col">
+                    <form action="/add-friend/{{ sugested_user[2] }}" method="POST">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                        <button type="submit" class="btn btn-sm mt-3 btn-outline-primary">Add friend</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

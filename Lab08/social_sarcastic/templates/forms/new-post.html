@@ -1,0 +1,14 @@
+<form class="border rounded clearfix" method="POST" action="/new_post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+    <!-- Post text area -->
+    {{ new_post_form.body(class_="text-area form-control bg border-0", id="post-body",
+                  onkeyup="setHeight('post-body')", placeholder="Type your post here:") }}
+
+    <!-- Picture and Post buttons -->
+    <div class="input-group">
+        {{ new_post_form.picture(class="form-control form-control", id="post-image")}}
+        <button type="submit" class="btn btn-primary float-end">Post</button>
+    </div>
+
+</form>

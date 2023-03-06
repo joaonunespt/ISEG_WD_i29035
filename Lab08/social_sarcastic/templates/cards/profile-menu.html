@@ -1,0 +1,26 @@
+<div class="card-header-pills dropup bg">
+    <a href="#" class="dropdown-toggle d-flex align-items-center"
+       id="profile-menu-toggler" data-bs-toggle="dropdown">
+        <img src="/static/assets/profile-imgs/{{ current_user }}.jpg"
+             width="38" height="38" alt="Your profile Image" class="rounded-circle profile-img">
+        <p class="d-none d-lg-inline mx-2 my-1">
+            <span class="text-displayname-sm">{{ current_user }}</span>
+            <br>
+            <span class="text-username">@{{ current_user }}</span>
+        </p>
+    </a>
+    <ul class="dropdown-menu text-small">
+        <li>
+            <a class="dropdown-item" href="/profile">Profile</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="/settings">Settings</a>
+        </li>
+        <li>
+            <hr class="dropdown-divider">
+        </li>
+        <li>
+            <a class="dropdown-item" href="/logout" methods="POST">Sign out</a>
+        </li>
+    </ul>
+</div>

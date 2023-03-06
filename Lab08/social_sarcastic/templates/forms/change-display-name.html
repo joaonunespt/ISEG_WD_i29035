@@ -1,0 +1,10 @@
+<label for="change-display-name-form" class="form-label text-label">Change display name</label>
+<form id="change-display-name-form">
+    {{ change_display_name_form.csrf_token }}
+    <!-- Input box -->
+    <div class="input-group">
+        {{ change_display_name_form.display_name(class="form-control", placeholder="New display name") }}
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+</form>

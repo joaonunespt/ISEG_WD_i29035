@@ -1,0 +1,21 @@
+<div class="card shadow bg-white rounded">
+    <div class="card-header">
+        <h1 class="text-navlink">Most Sarcastic Friends</h1>
+    </div>
+    <div class="card-body bg">
+        {% for featured_user in featured_users %}
+            <div class="mb-3">
+                <a href="/profile/{{ featured_user[2] }}">
+                    {% with current_user = featured_user[2] %}
+                        {% include "/partials/profile-image.html" %}
+                    {% endwith %}
+                    <p class="d-inline mx-2">
+                        <span class="text-displayname-sm d-none d-md-inline">{{ featured_user[1] }}</span>
+                        <span class="badge bg-primary rounded-pill align-text-bottom">{{ featured_user[7] }} posts</span>
+                    </p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+

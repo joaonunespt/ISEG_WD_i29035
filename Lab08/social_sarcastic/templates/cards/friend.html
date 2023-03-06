@@ -1,0 +1,25 @@
+<div class="card bg border-0 border-top border-bottom rounded-0">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8">
+                <a href="/profile/{{ friend[2] }}">
+                    <img src="/static/assets/profile-imgs/{{ friend[2] }}.jpg"
+                    width="50" height="50" alt="{{ friend[2] }}'s Profile Image" class="rounded-circle profile-img">
+
+                    <p class="d-inline mx-2">
+                        <span class="text-displayname">{{ friend[1] }}</span>
+                        <span class="text-username">@{{ friend[2] }}</span>
+                    </p>
+                </a>
+            </div>
+            <div class="col-4">
+                <!-- Remove friend button -->
+                 <form action="/remove-friend/{{ friend[2] }}" method="POST">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    <!-- <button type="submit" class="btn-sm btn-primary mt-2">Remove friends</button>-->
+                    <button type="submit" class="btn btn-sm mt-3 btn-outline-danger">Remove friend</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
