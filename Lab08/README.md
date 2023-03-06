@@ -16,6 +16,10 @@ S@rc@stic:
 
 ![image](https://user-images.githubusercontent.com/74052985/223011135-89f4c27c-0f24-4f58-954f-5d1518f47dc2.png)
 
+Post:
+
+![image](https://user-images.githubusercontent.com/74052985/223011952-32253e89-466d-4bdd-94a3-424cf1b39d7b.png)
+
 Friends Page:
 
 ![image](https://user-images.githubusercontent.com/74052985/223011290-37f60944-ee9d-4a92-8658-9699922a7898.png)
